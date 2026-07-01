@@ -27,7 +27,7 @@ Windows では PowerShell 版を使用してください。
 使用するスクリプト:
 
 ```powershell
-sshfilepipe.ps1
+sfp.ps1
 ```
 
 ### macOS / Linux
@@ -41,13 +41,13 @@ macOS / Linux では shell script 版を使用してください。
 使用するスクリプト:
 
 ```bash
-sshfilepipe.sh
+sfp.sh
 ```
 
 実行権限を付与してください。
 
 ```bash
-chmod +x sshfilepipe.sh
+chmod +x sfp.sh
 ```
 
 ## Usage
@@ -55,13 +55,13 @@ chmod +x sshfilepipe.sh
 ### Windows
 
 ```powershell
-.\sshfilepipe.ps1 send|get -s USER@HOST -p PATH [-c CHANNEL] [-n]
+.\sfp.ps1 send|get -s USER@HOST -p PATH [-c CHANNEL] [-n]
 ```
 
 ### macOS / Linux
 
 ```bash
-./sshfilepipe.sh send|get -s USER@HOST -p PATH [-c CHANNEL] [-n]
+./sfp.sh send|get -s USER@HOST -p PATH [-c CHANNEL] [-n]
 ```
 
 ## Options
@@ -83,26 +83,26 @@ chmod +x sshfilepipe.sh
 受信側を先に起動します。
 
 ```powershell
-.\sshfilepipe.ps1 get -s user@example.com -c room1 -p .\recv
+.\sfp.ps1 get -s user@example.com -c room1 -p .\recv
 ```
 
 別の端末からディレクトリを送信します。
 
 ```powershell
-.\sshfilepipe.ps1 send -s user@example.com -c room1 -p .\send
+.\sfp.ps1 send -s user@example.com -c room1 -p .\send
 ```
 
 ファイルを1つ送信します。
 
 ```powershell
-.\sshfilepipe.ps1 send -s user@example.com -c room1 -p .\send\memo.txt
+.\sfp.ps1 send -s user@example.com -c room1 -p .\send\memo.txt
 ```
 
 圧縮なしで転送します。
 
 ```powershell
-.\sshfilepipe.ps1 get  -s user@example.com -c room1 -p .\recv -n
-.\sshfilepipe.ps1 send -s user@example.com -c room1 -p .\send -n
+.\sfp.ps1 get  -s user@example.com -c room1 -p .\recv -n
+.\sfp.ps1 send -s user@example.com -c room1 -p .\send -n
 ```
 
 ### macOS / Linux
@@ -110,26 +110,26 @@ chmod +x sshfilepipe.sh
 受信側を先に起動します。
 
 ```bash
-./sshfilepipe.sh get -s user@example.com -c room1 -p ./recv
+./sfp.sh get -s user@example.com -c room1 -p ./recv
 ```
 
 別の端末からディレクトリを送信します。
 
 ```bash
-./sshfilepipe.sh send -s user@example.com -c room1 -p ./send
+./sfp.sh send -s user@example.com -c room1 -p ./send
 ```
 
 ファイルを1つ送信します。
 
 ```bash
-./sshfilepipe.sh send -s user@example.com -c room1 -p ./send/memo.txt
+./sfp.sh send -s user@example.com -c room1 -p ./send/memo.txt
 ```
 
 圧縮なしで転送します。
 
 ```bash
-./sshfilepipe.sh get  -s user@example.com -c room1 -p ./recv -n
-./sshfilepipe.sh send -s user@example.com -c room1 -p ./send -n
+./sfp.sh get  -s user@example.com -c room1 -p ./recv -n
+./sfp.sh send -s user@example.com -c room1 -p ./send -n
 ```
 
 ## How it works
