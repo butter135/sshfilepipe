@@ -58,6 +58,14 @@ chmod +x sfp.sh
 .\sfp.ps1 send|get -s USER@HOST -p PATH [-c CHANNEL] [-n]
 ```
 
+### PowerShell スクリプトの実行許可
+
+Windows で `sfp.ps1` の実行時に署名エラーが出る場合は、内容を確認した上で以下を実行してください。
+
+```powershell
+Unblock-File .\sfp.ps1
+```
+
 ### macOS / Linux
 
 ```bash
